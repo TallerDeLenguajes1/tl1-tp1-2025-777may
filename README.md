@@ -1,17 +1,26 @@
 # .gitignore
-    Es un archivo oculto que permite a git identificar los archivos que no debe rastrear, es decir, excluir de repositorios. 
+  Es un una herramienta que permite a _git_ identificar los archivos que no debe rastrear, es decir, excluir de repositorios.
+  Esta herramienta es un _archivo oculto_ donde podremos indicar cuáles _patrones_ de archivos o carpetas debe ignorar. 
+    Por ejemplo, todos los archivos terminaods en *.exe*
 ## Su uso:
-  Si bien actualmente se puede evitar el rastreo de archivos git por medio de:
-  - Lineas de comando
-  - Configuración de la variable "core.excludesFile"
-  - La carpeta local $GIT_DIR/info/exclude
-  - La creacion de un archivo .gitignore
-  ### ¿Porqué usar .gitignore?
-    Porque su uso permite que los patrones de archivos que se encuentren en su interior sean ignorados por git en cada repositorio que posea la copia de ese archivo .gitignore, permitiendo que otros usuarios al copiar el repositorio (con su .gitignore incluido) también agreguen en su git los patrones a ignorar
-## C uando ponerlo:
-  Lo ideal es crear el archivo .gitignore al inicio del proyecto ya que una vez creado y agregado a la tabla de trabajo, un archivo aunque incluya un patron para ser ignorado seguirá siendo rastreado. En caso de desear detener el rastreo de un archivo hay que usar "git rm --cached" y proceder a agregarlo o agregar el patron que desea ignorar al archivo .gitignore
+  Si bien actualmente se puede evitar que _git_ rastree archivos por medio de:
+  - Líneas de comando
+  - Configuración de la variable *core.excludesFile*
+  - La carpeta local *$GIT_DIR/info/exclude*
+  - La creacion de un archivo *.gitignore*
+  ### ¿Porqué optar por *.gitignore* entre las opciones?
+  - Posee una sintáxis simple y clara
+  - Es fácilmente modificable
+  - Podemos incluir *.gitignore* en los repositorios, así otros también posean una copia _versionada_ de los _patrones_ que deseamos que permanezcan sin rastreo.
+  - Trabaja en un patrón de árbol, por lo que al ignorar una carpeta no recorrerá sus directorios y archivos internos.
+## ¿Cuándo poner una excepción?:
+  Cuando queremos evitar el _versionado_ de archivos temporales e ignorar dependencias y configuraciones locales, para mantener limpio el proyecto.
+  Lo ideal es crear el archivo *.gitignore* al inicio del proyecto ya que una vez creado un archivo o directorio será rastreado. 
+  En caso de desear detener el rastreo de un archivo habrá que hacerlo de forma manual, usando *git rm --cached _nombre del archivo_* y procediendo a agregar el patron que desea ignorar al archivo *.gitignore*
 ## Su configuracion:
-  Los # al inicio de línea permiten comentar el código, un "!" permite revertir la exclusión del archivo por parte de otros comandos - siempre y cuando no se encuentre dentro de una carpeta ignorada -, / sirve para separar directorios, un * solo coincide con / y ? con cualquier cosa que no sea un / 
+  El archivo *.gitignore* debe poseer cierto orden y sintaxis. Los comentarios se realizan con *#* al inicio de una línea; las excepsiones de rastreo se realizan con *!* delante del patrón -de ser necesario inmediatamente después de mensionar su directorio contenedor-; para excluir un caractér de su comportamiento especial se usa *\\* ; para separar directorios */* y *\** para cualquier coincidencia excepto */* y *?* para cualquier caractér coincidente excepto */*.
+    Por más información puede visitar el [sitio web] (https://git--scm-com.translate.goog/docs/gitignore?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc#_name).
+   
  
 
 
