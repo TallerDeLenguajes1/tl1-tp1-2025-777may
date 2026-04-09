@@ -1,7 +1,7 @@
 # .gitignore
   Es un una herramienta que permite a _git_ identificar los archivos que no debe rastrear, es decir, excluir de repositorios.
   Esta herramienta es un _archivo oculto_ donde podremos indicar cuáles _patrones_ de archivos o carpetas debe ignorar. 
-    Por ejemplo, todos los archivos terminaods en *.exe*
+      Por ejemplo, todos los archivos terminaods en *.exe*
 ## Su uso:
   Si bien actualmente se puede evitar que _git_ rastree archivos por medio de:
   - Líneas de comando
@@ -19,7 +19,7 @@
   En caso de desear detener el rastreo de un archivo habrá que hacerlo de forma manual, usando *git rm --cached _nombre del archivo_* y procediendo a agregar el patron que desea ignorar al archivo *.gitignore*
 ## Su configuracion:
   El archivo *.gitignore* debe poseer cierto orden y sintaxis. Los comentarios se realizan con *#* al inicio de una línea; las excepsiones de rastreo se realizan con *!* delante del patrón -de ser necesario inmediatamente después de mensionar su directorio contenedor-; para excluir un caractér de su comportamiento especial se usa *\\* ; para separar directorios */* y *\** para cualquier coincidencia excepto */* y *?* para cualquier caractér coincidente excepto */*.
-    Por más información puede visitar el [sitio web] (https://git--scm-com.translate.goog/docs/gitignore?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc#_name).
+      Por más información puede visitar el [sitio web](https://git--scm-com.translate.goog/docs/gitignore?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc#_name).
    
  
 
