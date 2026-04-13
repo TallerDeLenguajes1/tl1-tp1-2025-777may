@@ -42,4 +42,5 @@ int main() {
     printf("Resultado final del enigma: %d\n", dato_secreto);
     
     return 0;
+    
 }
